@@ -1,26 +1,6 @@
 {
-  "auth": {
-    "identityProviders": {
-      "customOpenIdConnectProviders": {
-        "externalid": {
-          "registration": {
-            "clientIdSettingName": "OIDC_CLIENT_ID",
-            "clientSecretSettingName": "OIDC_CLIENT_SECRET",
-            "openIdConnectConfiguration": {
-              "wellKnownOpenIdConfiguration": "https://payrollextid.ciamlogin.com/ad3472a6-4ed0-4320-8437-2e555cada5b5/v2.0/.well-known/openid-configuration"
-            }
-          },
-          "login": { "scopes": ["openid","profile","email"] },
-          "userIdClaim": "sub"
-        }
-      }
-    }
-  },
   "routes": [
-    { "route": "/*", "allowedRoles": ["authenticated"] },
+    { "route": "/*", "allowedRoles": ["anonymous"] }
   ],
-  "responseOverrides": {
-    "401": { "statusCode": 302, "redirect": "/.auth/login/externalid?post_login_redirect_uri=/" }
-  },
   "navigationFallback": { "rewrite": "/index.html" }
 }
