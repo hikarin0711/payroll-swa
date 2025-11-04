@@ -7,7 +7,7 @@
             "clientIdSettingName": "OIDC_CLIENT_ID",
             "clientSecretSettingName": "OIDC_CLIENT_SECRET",
             "openIdConnectConfiguration": {
-              "wellKnownOpenIdConfiguration": "https://payrollextid.ciamlogin.com/payrollextid.onmicrosoft.com/v2.0/.well-known/openid-configuration"
+              "wellKnownOpenIdConfiguration": "https://payrollextid.ciamlogin.com/ad3472a6-4ed0-4320-8437-2e555cada5b5/v2.0/.well-known/openid-configuration"
             }
           },
           "login": { "scopes": ["openid","profile","email"] },
